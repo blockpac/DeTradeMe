@@ -38,27 +38,27 @@ export default class NavbarComp extends Component {
           </Navbar.Item>
 
           <Navbar.Burger onClick={this.toggleNavBar} />
-      </Navbar.Brand>
+        </Navbar.Brand>
 
-      <Navbar.Menu>
-        <Navbar.Container position="end">
-          {
-            isSignedIn &&
+        <Navbar.Menu>
+          <Navbar.Container position="end">
+            {
+              isSignedIn &&
               <React.Fragment>
                 <Navbar.Item>
                   My Listings
                 </Navbar.Item>
                 <Navbar.Item>
-                My Profile
+                  My Profile
                 </Navbar.Item>
                 <Navbar.Item onClick={this.handleSignOut}>
-                Sign Out
+                  Sign Out
                 </Navbar.Item>
               </React.Fragment>
             }
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>
-  )
+    )
   }
 }
