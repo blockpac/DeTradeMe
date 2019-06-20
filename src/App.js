@@ -3,7 +3,7 @@ import './stylesheets/main.scss';
 import { appConfig } from 'utils/constants'
 import { UserSession } from 'blockstack'
 import Login from 'components/Login'
-import NavbarComp from 'components/Navbar'
+import Routes from 'pages/routes'
 
 class App extends Component {
   state = {
@@ -32,7 +32,9 @@ class App extends Component {
       <div className="App">
         {
           userSession.isUserSignedIn() ?
-            <NavbarComp userSession={userSession} /> :
+
+            <Routes userSession={userSession} />
+            :
             <Login userSession={userSession} />
 
         }

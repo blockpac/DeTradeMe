@@ -1,8 +1,14 @@
 @import "./utility";
 @import '~react-bulma-components/dist/react-bulma-components.min.css';
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700");
+.admin-username, .card-form, .post-table {
+	margin-top: 10px;
+}
 
-// Bootstrap
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+.post-view{
+	margin-top: 10px;
+	
+}
+
+
+
