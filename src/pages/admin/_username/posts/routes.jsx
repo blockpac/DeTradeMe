@@ -7,9 +7,11 @@ import AdminPostView from 'pages/admin/_username/posts/_post_id'
 import AdminPostEdit from 'pages/admin/_username/posts/_post_id/edit'
 
 class AdminUsernamePostsRoutes extends Component {
+
 	static propTypes = {
 		match: PropTypes.object.isRequired
 	}
+
 	render() {
 		return (
 			<Switch>
