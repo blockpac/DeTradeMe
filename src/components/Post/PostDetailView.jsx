@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
-import { Card, Heading, Content } from 'react-bulma-components'
+import { Card, Heading, Content, Image, Columns } from 'react-bulma-components'
 
 class PostDetailView extends Component {
 	state = {
@@ -26,6 +26,7 @@ class PostDetailView extends Component {
 
 		// admin/username/posts
 		return history.push(`/admin/${username}/posts`)
+		//return null
 	}
 	render() {
 		const { post } = this.state
@@ -35,12 +36,20 @@ class PostDetailView extends Component {
 				<Card>
 					<Card.Content>
 						<Content>
-							<Heading renderAs="h1">{post.title}</Heading>
-							<Heading renderAs="h3">ID - {post.id}</Heading>
-							<Heading renderAs="h3">Description</Heading>
-							<p>{post.description}</p>
-							<Heading renderAs="h3">Price</Heading>
-							<p>{post.currency} {post.price}</p>
+							<Columns mobile>
+								<Columns.Column>
+									<div style={{ width: 640 }}>
+										<Image src="http://bulma.io/images/placeholders/640x480.png" size="3by2" />
+									</div>
+								</Columns.Column>
+								<Columns.Column>
+									<Heading renderAs="h1">{post.title}</Heading>
+									<Heading renderAs="h3">Description</Heading>
+									<p>{post.description}</p>
+									<Heading renderAs="h3">Price</Heading>
+									<p>{post.currency} {post.price}</p>
+								</Columns.Column>
+							</Columns>
 						</Content>
 					</Card.Content>
 				</Card>
