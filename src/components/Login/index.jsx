@@ -21,11 +21,11 @@ export default class Login extends Component {
       <div>
         {
           loading ? <Loader /> :
-            <section class="hero is-link is-bold is-fullheight">
-              <div class="hero-body">
-                <div class="container">
-                  <h1 class="title">Blockstack DeTrade Me</h1>
-                  <h2 class="subtitle">
+            <section className="hero is-link is-bold is-fullheight">
+              <div className="hero-body">
+                <div className="container">
+                  <h1 className="title">Blockstack DeTrade Me</h1>
+                  <h2 className="subtitle">
                     A decentralized MarketPlace app built on{" "}
                     <u>
                       <a
@@ -37,7 +37,7 @@ export default class Login extends Component {
                       </a>
                     </u>
                   </h2>
-                  <Button class="button is-large is-light"
+                  <Button className="button is-large is-light"
                     onClick={this.handleSignIn}
                   >
                     Sign in with Blockstack

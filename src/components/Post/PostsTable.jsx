@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom'
 
 class PostsTable extends Component {
 	static propTypes = {
-		delete: PropTypes.func.isRequired,
+		deletePost: PropTypes.func.isRequired,
 		username: PropTypes.string.isRequired,
 		posts: PropTypes.array.isRequired,
 		history: PropTypes.object.isRequired,

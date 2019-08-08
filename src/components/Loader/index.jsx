@@ -2,9 +2,9 @@ import React from 'react'
 import './_loader.scss'
 
 const loader = () => (
-	<section class="hero is-white is-fullheight">
-		<div class="hero-body">
-			<div class="container">
+	<section className="hero is-white is-fullheight">
+		<div className="hero-body">
+			<div className="container">
 				<div className="windows8">
 					<div className="wBall" id="wBall_1">
 						<div className="wInnerBall"></div>
