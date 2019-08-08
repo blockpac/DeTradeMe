@@ -16,7 +16,7 @@ import {
 	Content
 } from 'react-bulma-components'
 import { POST_FILENAME } from 'utils/constants'
-import generateUUID from 'utils/generateUUID'
+import uuid from 'uuid'
 
 class PostForm extends Component {
 	constructor(props) {
@@ -113,7 +113,7 @@ class PostForm extends Component {
 		const options = { encrypt: false }
 		const { title, description, price, currency, posts } = this.state
 		const { history, userSession, username } = this.props
-		const id = generateUUID()
+		const id = uuid.v4()
 
 		// for post.json
 		const params = {
