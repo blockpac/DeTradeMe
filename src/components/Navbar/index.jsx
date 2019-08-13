@@ -33,6 +33,13 @@ export class NavbarComp extends Component {
     this.setState({ open: !this.state.open })
   }
 
+  goToHomePage = () => {
+    const { history } = this.props
+    const { user } = this.state
+
+    return history.push(`/admin/${user.username}/`)
+  }
+
   goToAdminPosts = () => {
     const { history } = this.props
     const { user } = this.state
@@ -44,7 +51,7 @@ export class NavbarComp extends Component {
     const { history } = this.props
     const { user } = this.state
 
-    return history.push(`/admin/${user.username}`)
+    return history.push(`/admin/${user.username}/profile`)
   }
 
   render() {
@@ -59,8 +66,8 @@ export class NavbarComp extends Component {
         active={open}
       >
         <Navbar.Brand>
-          <Navbar.Item>
-            <p>DeTrade Me</p>
+          <Navbar.Item onClick={this.goToHomePage}>
+            DeTrade Me
           </Navbar.Item>
 
           <Navbar.Burger onClick={this.toggleNavBar} />

@@ -7,6 +7,7 @@ import { Container } from 'react-bulma-components'
 import NavbarComp from 'components/Navbar'
 import AdminUsernameRoute from 'pages/admin/_username/routes'
 import UsernamePostsRoute from 'pages/_username/routes'
+import Profile from 'pages/admin/_username/profile'
 
 class Routes extends Component {
 	state = { user: {} }
@@ -34,6 +35,10 @@ class Routes extends Component {
 							exact
 							path="/"
 							render={() => <Redirect to={`/admin/${user.username}`} />}
+						/>
+						<Route
+							path="/admin/:username/profile"
+							render={() => <Profile userSession={userSession} />}
 						/>
 						<Route
 							path="/admin/:username"

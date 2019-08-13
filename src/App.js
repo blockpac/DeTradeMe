@@ -24,7 +24,6 @@ class App extends Component {
     }
   }
 
-
   render() {
     const { userSession } = this.state
 
