@@ -5,7 +5,7 @@
   "dependencies": {
     "blockstack": "^19.2.5",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-bulma-components": "^3.0.1-6",
     "react-dom": "^16.8.6",
